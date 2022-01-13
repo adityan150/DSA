@@ -4,10 +4,14 @@ public class FindInRoatatedSortedArrayWithDuplicates {
     public static int search(int[] nums, int target) {
         int pivot = findPivot(nums);
         System.out.println(pivot);
+        
+        // if no pivot found, array is not rotated, perform normal binary search
         if (pivot == -1)
             return binarySearch(nums, target, 0, nums.length - 1);
+        // if target is greater than start element, it lies on the left ascending part of the array
         else if (target > nums[0])
             return binarySearch(nums, target, 0, pivot);
+        // else it is on the right ascending part
         else
             return binarySearch(nums, target, pivot+1, nums.length - 1);
     }
@@ -42,12 +46,12 @@ public class FindInRoatatedSortedArrayWithDuplicates {
             // mid is the pivot
             if(mid < end && nums[mid] > nums[mid+1])
                 return mid;
-                // mid-1 is the pivot
+            // mid-1 is the pivot
             else if(mid > start && nums[mid] < nums[mid-1])
                 return mid-1;
 
             // special condition to check duplicates
-
+            // when start = mid = end
             else if(nums[mid] == nums[start] && nums[mid] == nums[end]) {
                 // check if start is pivot
                 if(nums[start] > nums[start+1])
