@@ -5,8 +5,6 @@ public class FindRotationCountOfArray {
         // rotation is clockwise
         int pivot = findPivot(nums);
 
-        if(pivot == -1)
-            return 0;
         return pivot+1;
     }
 
