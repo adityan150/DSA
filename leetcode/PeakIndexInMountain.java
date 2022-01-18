@@ -1,4 +1,4 @@
-package com.aditya.leetcode;
+package com.aditya.DSA.leetcode;
 // Question 852
 public class PeakIndexInMountain {
     public static int peakIndexInMountainArray(int[] arr) {

@@ -1,4 +1,4 @@
-package com.aditya.leetcode;
+package com.aditya.DSA.leetcode;
 
 public class FindRotationCountOfArray {
     public static int countRotation(int[] nums) {

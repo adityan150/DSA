@@ -1,4 +1,4 @@
-package com.aditya.leetcode;
+package com.aditya.DSA.leetcode;
 // https://leetcode.com/problems/split-array-largest-sum/
 // Q410
 public class SplitToMinimizeLargestSum {

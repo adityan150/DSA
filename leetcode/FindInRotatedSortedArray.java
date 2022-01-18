@@ -1,4 +1,4 @@
-package com.aditya.leetcode;
+package com.aditya.DSA.leetcode;
 // question 33
 public class FindInRotatedSortedArray {
     public static int search(int[] nums, int target) {

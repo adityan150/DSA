@@ -1,4 +1,4 @@
-package com.aditya.leetcode;
+package com.aditya.DSA.leetcode;
 
 public class FindInRoatatedSortedArrayWithDuplicates {
     public static int search(int[] nums, int target) {

@@ -1,4 +1,4 @@
-package com.aditya.leetcode;
+package com.aditya.DSA.leetcode;
 // Question 34
 public class FindFirstAndLastIndex {
     public static int[] searchRange(int[] nums, int target) {
