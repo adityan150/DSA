@@ -1,7 +1,7 @@
 package com.aditya.DSA.Data_Structures;
 
 import java.util.Iterator;
-public class ResizingArrayStack<Item> {
+public class ResizingArrayStack<Item> implements Iterable<Item>{
     private Item[] a = (Item[]) new Object[1];   // Stack of items, capacity = 1
     private int N = 0;                           // Number of items
 
