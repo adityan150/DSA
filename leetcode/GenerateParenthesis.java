@@ -4,33 +4,32 @@ package com.aditya.DSA.leetcode;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Stack;
 
 public class GenerateParenthesis {
     public static List<String> generateParenthesis(int n) {
         List<String> res = new ArrayList<String>();
-        parenthesis(res, "", n, n);
+        parenthesis(res, new char[n*2], 0, n, n);
         return res;
     }
-    public static void parenthesis(List<String> res, String S, int open, int close) {
+    public static void parenthesis(List<String> res, char[] S, int pos, int open, int close) {
         if (open == 0 && close == 0) {
-            res.add(S);
+            res.add(new String(S));
             return;
         }
         if (open > 0) {
-            S += "(";
-            parenthesis(res, S, open-1, close);
-            S = S.substring(0, S.length()-1);
+            S[pos] = '(';
+            parenthesis(res, S, pos+1, open-1, close);
         }
         if (close > 0 && close > open) {
-            S += ")";
-            parenthesis(res, S, open, close-1);
-            S = S.substring(0, S.length()-1);
+            S[pos] = ')';
+            parenthesis(res, S, pos+1, open, close-1);
         }
     }
 
     public static void main(String[] args) {
         List<String> paren = new ArrayList<>();
-        paren = generateParenthesis(8);
+        paren = generateParenthesis(3);
         for (String ele: paren) {
             System.out.println(ele);
         }
