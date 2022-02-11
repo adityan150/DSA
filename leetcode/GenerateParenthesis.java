@@ -7,6 +7,7 @@ import java.util.List;
 import java.util.Stack;
 
 public class GenerateParenthesis {
+    // optimization: char array in place of string to pass by reference
     public static List<String> generateParenthesis(int n) {
         List<String> res = new ArrayList<String>();
         parenthesis(res, new char[n*2], 0, n, n);

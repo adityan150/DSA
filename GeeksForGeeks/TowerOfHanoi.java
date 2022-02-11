@@ -1,4 +1,4 @@
-package com.aditya.DSA.leetcode;
+package com.aditya.DSA.GeeksForGeeks;
 
 // https://practice.geeksforgeeks.org/problems/tower-of-hanoi-1587115621/1
 public class TowerOfHanoi {

@@ -1,4 +1,4 @@
-package com.aditya.DSA.leetcode;
+package com.aditya.DSA.GeeksForGeeks;
 
 // https://practice.geeksforgeeks.org/problems/josephus-problem/1/
 public class Josephus {

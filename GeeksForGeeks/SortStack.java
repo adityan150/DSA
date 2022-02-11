@@ -1,4 +1,4 @@
-package com.aditya.DSA.leetcode;
+package com.aditya.DSA.GeeksForGeeks;
 
 import java.util.Stack;
 

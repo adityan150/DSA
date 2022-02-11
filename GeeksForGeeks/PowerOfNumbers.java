@@ -1,4 +1,4 @@
-package com.aditya.DSA.leetcode;
+package com.aditya.DSA.GeeksForGeeks;
 
 //https://practice.geeksforgeeks.org/problems/power-of-numbers-1587115620/
 
