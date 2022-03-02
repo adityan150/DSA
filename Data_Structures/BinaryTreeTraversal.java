@@ -1,5 +1,7 @@
 package com.aditya.DSA.Data_Structures;
 
+import java.util.Stack;
+
 public class BinaryTreeTraversal extends BinaryTree{
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
@@ -13,12 +15,22 @@ public class BinaryTreeTraversal extends BinaryTree{
 
         tree.root.right.left = new Node(6);
         tree.root.right.right = new Node(7);
+
+        tree.root.left.left.left = new Node(8);
+        tree.root.left.right.right = new Node(9);
+
+        tree.root.right.left.left = new Node(10);
+        tree.root.right.left.left.right = new Node(11);
         /*
-                    1
-                  /    \
-                2       3
-              /  \     /  \
-             4    5   6    7
+                     1
+                  /     \
+                2        3
+              /  \      /  \
+             4    5    6    7
+            /      \  /
+           8       9  10
+                       \
+                       11
          */
 
         System.out.println("\nInorder: ");
@@ -28,7 +40,11 @@ public class BinaryTreeTraversal extends BinaryTree{
         System.out.println("\nPost order: ");
         printPostOrder(tree.root);
         System.out.println("\nInorder without recursion: ");
-        inOrder(tree.root);
+        inOrderStack(tree.root);
+        System.out.println("\nPreOrder without recursion: ");
+        preOrderStack(tree.root);
+        System.out.println("\nPost order without recursion: ");
+        postOrderStack(tree.root);
     }
 
     static void printInOrder(Node node) {
@@ -62,11 +78,12 @@ public class BinaryTreeTraversal extends BinaryTree{
     }
 
     /*
-    Step 1: push the current node on stack and set current to current.left
+    In-order: left root right
+    Step 1: push the current node on stack and set current to current.left, reach left most node
     Step 2: if current = null, pop element and set current = current.right
     Step 3: if current = null and stack is empty, exit
      */
-    static void inOrder(Node node) {
+    static void inOrderStack(Node node) {
         Stack<Node> S = new Stack<>();
 
         Node current = node;
@@ -79,6 +96,68 @@ public class BinaryTreeTraversal extends BinaryTree{
             current = S.pop();
             System.out.print(current.key + " ");
             current = current.right;
+        }
+    }
+
+    /*
+    Pre-Order: Root left right
+    Step 1: Print current node, push it onto the stack, set current = current.left, reach left most node
+    Step 2: Pop an element from stack, set current = current.right
+    Step 3: if current is null and stack is empty, exit
+     */
+    static void preOrderStack(Node node) {
+        Stack<Node> S = new Stack<>();
+
+        Node current = node;
+
+        while (current != null || !S.isEmpty()) {
+
+            while (current != null) {
+                System.out.print(current.key + " ");
+                S.push(current);
+                current = current.left;
+            }
+            current = S.pop();
+            current = current.right;
+        }
+    }
+
+    /*
+    Post order: left right root
+    Step 1: If current node has a right child, push it first, then push current on the stack,
+            set current = current.left, reach left most node
+    Step 2: Set current = popped element from stack
+    Step 3: if current has a right child AND stack is not empty AND current.right is at top of stack
+            pop node from top of stack
+            push current on the stack
+            set current = popped node
+    Step 4: else print current and set current to null
+     */
+    static void postOrderStack(Node node) {
+        Stack<Node> S = new Stack<>();
+
+        Node current = node;
+
+        while (current != null || !S.isEmpty()) {
+
+            while (current != null) {
+                if (current.right != null) {
+                    S.push(current.right);
+                }
+                S.push(current);
+                current = current.left;
+            }
+
+            current = S.pop();
+            if (current.right != null && !S.isEmpty() && current.right == S.peek()) {
+                Node temp = S.pop();
+                S.push(current);
+                current = temp;
+            }
+            else {
+                System.out.print(current.key + " ");
+                current = null;
+            }
         }
     }
 }
