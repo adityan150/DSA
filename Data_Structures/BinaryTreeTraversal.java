@@ -1,5 +1,6 @@
 package com.aditya.DSA.Data_Structures;
 
+import java.util.List;
 import java.util.Stack;
 
 public class BinaryTreeTraversal extends BinaryTree{
@@ -133,28 +134,38 @@ public class BinaryTreeTraversal extends BinaryTree{
             set current = popped node
     Step 4: else print current and set current to null
      */
-    static void postOrderStack(Node node) {
+    static void postOrderStack(Node root) {
         Stack<Node> S = new Stack<>();
-
-        Node current = node;
+        Node current = root;
 
         while (current != null || !S.isEmpty()) {
-
+            // go to left most node in current subtree
             while (current != null) {
-                if (current.right != null) {
-                    S.push(current.right);
-                }
+                // push right child on stack
+                if (current.right != null) S.push(current.right);
+                // push current
                 S.push(current);
+                // move to left child
                 current = current.left;
             }
-
+            // current is/becomes null
+            // pop item from stack
             current = S.pop();
-            if (current.right != null && !S.isEmpty() && current.right == S.peek()) {
+
+            // if popped node's right subtree is unprocessed
+            // if right child of current is still in stack
+            if (!S.isEmpty() && current.right != null && current.right == S.peek()) {
+                // pop the right child to process it
+                // push the current/parent node on stack to process later
                 Node temp = S.pop();
                 S.push(current);
                 current = temp;
             }
             else {
+                // right child is already processed
+                // add the current node to result list
+                // left subtree is processed or does not have a left child
+                // set current to null to skip moving to left subtree in next iteration
                 System.out.print(current.key + " ");
                 current = null;
             }

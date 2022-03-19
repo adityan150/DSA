@@ -1,4 +1,4 @@
-package com.aditya.DSA.Algorithm;
+package com.aditya.DSA.Algorithm.Tree;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

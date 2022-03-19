@@ -1,7 +1,5 @@
 package com.aditya.DSA.GeeksForGeeks;
 
-import com.aditya.DSA.Algorithm.LevelOrderTraversalTree;
-
 import java.util.ArrayList;
 
 public class ZigZagTree {

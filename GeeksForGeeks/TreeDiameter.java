@@ -1,7 +1,5 @@
 package com.aditya.DSA.GeeksForGeeks;
 
-import com.aditya.DSA.Algorithm.MorrisTraversal;
-
 public class TreeDiameter {
     TreeNode root;
     int maxDiameter;
