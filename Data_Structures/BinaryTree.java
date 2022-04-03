@@ -1,17 +1,18 @@
 package com.aditya.DSA.Data_Structures;
 
-class Node {
-    int key;
-    Node left;
-    Node right;
 
-    Node(int item) {
-        key = item;
-        left = right = null;
-    }
-}
 
 public class BinaryTree {
+    static class Node {
+        int key;
+        Node left;
+        Node right;
+
+        Node(int item) {
+            key = item;
+            left = right = null;
+        }
+    }
     Node root;
 
     BinaryTree(int key) {
