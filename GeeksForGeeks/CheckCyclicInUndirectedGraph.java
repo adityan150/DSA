@@ -36,7 +36,7 @@ public class CheckCyclicInUndirectedGraph {
 
         boolean isCyclicUtil(int vertex, int parent, boolean[] visited) {
             visited[vertex] = true;
-j
+
             ArrayList<Integer> list = adj.get(vertex);
             for (int i: list) {
                 if (!visited[i]) {
