@@ -1,6 +1,4 @@
-package com.aditya.DSA.GeeksForGeeks;
-
-import com.aditya.DSA.leetcode.ListNode;
+package GeeksForGeeks;
 
 public class ReverseListInGroup {
     public static Node reverse(Node node, int k) {

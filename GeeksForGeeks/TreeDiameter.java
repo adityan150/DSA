@@ -1,4 +1,4 @@
-package com.aditya.DSA.GeeksForGeeks;
+package GeeksForGeeks;
 
 public class TreeDiameter {
     TreeNode root;

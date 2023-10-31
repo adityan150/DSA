@@ -1,2 +1,2 @@
-package com.aditya.DSA.GeeksForGeeks;public class MazeGraph {
+package GeeksForGeeks;public class MazeGraph {
 }

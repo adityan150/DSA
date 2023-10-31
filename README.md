@@ -1,2 +1,2 @@
 # DSA
-Algorithm implementation and leetcode solutions.
+Algorithm implementation and Leetcode solutions.

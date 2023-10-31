@@ -1,18 +1,16 @@
-package com.aditya.DSA.Algorithm.Tree;
+package Algorithm.Tree;
 
+//public class TreeNode {
+//    int value;
+//    TreeNode left, right;
+//    TreeNode(int value) {
+//        this.value = value;
+//        left = right = null;
+//    }
+//}
 
 public class MorrisTraversal {
     TreeNode root;
-    private class TreeNode{
-        int key;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int item) {
-            key = item;
-            left = right = null;
-        }
-    }
 
     // In-order morris traversal
     // print if left subtree is visited
@@ -24,7 +22,7 @@ public class MorrisTraversal {
             if (current.left == null) {
                 // no left child
                 // print current and move to right
-                System.out.print(current.key + " ");
+                System.out.print(current.value + " ");
                 current = current.right;
             }
             else {
@@ -40,7 +38,7 @@ public class MorrisTraversal {
 
                 if (ln.right == current) {
                     ln.right = null;
-                    System.out.print(current.key + " ");
+                    System.out.print(current.value + " ");
                     current = current.right;
                 }
 
@@ -64,7 +62,7 @@ public class MorrisTraversal {
             if (current.left == null) {
                 // no left child
                 // print current and move to right
-                System.out.print(current.key + " ");
+                System.out.print(current.value + " ");
                 current = current.right;
             }
             else {
@@ -87,7 +85,7 @@ public class MorrisTraversal {
                 // create thread from right-most node in left subtree to current node
                 else {
                     ln.right = current;
-                    System.out.print(current.key + " ");
+                    System.out.print(current.value + " ");
                     current = current.left;
                 }
             }

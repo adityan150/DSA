@@ -1,4 +1,4 @@
-package com.aditya.DSA.Data_Structures;
+package Data_Structures;
 
 import java.util.ArrayList;
 import java.util.HashMap;

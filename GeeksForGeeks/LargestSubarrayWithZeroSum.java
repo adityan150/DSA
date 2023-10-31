@@ -1,4 +1,4 @@
-package com.aditya.DSA.GeeksForGeeks;
+package GeeksForGeeks;
 
 import java.util.HashMap;
 

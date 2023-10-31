@@ -1,6 +1,4 @@
-package com.aditya.DSA.GeeksForGeeks;
-
-import java.util.Arrays;
+package GeeksForGeeks;
 
 public class RemoveDuplicatesUnsortedList {
 

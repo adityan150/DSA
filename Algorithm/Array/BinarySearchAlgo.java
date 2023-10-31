@@ -1,4 +1,4 @@
-package com.aditya.DSA.Algorithm.Array;
+package Algorithm.Array;
 
 public class BinarySearchAlgo {
     public static int binarySearch(int[] nums, int target) {

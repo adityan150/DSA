@@ -1,4 +1,4 @@
-package com.aditya.DSA.GeeksForGeeks;
+package GeeksForGeeks;
 
 // https://practice.geeksforgeeks.org/problems/tower-of-hanoi-1587115621/1
 public class TowerOfHanoi {

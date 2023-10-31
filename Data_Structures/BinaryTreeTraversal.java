@@ -1,4 +1,4 @@
-package com.aditya.DSA.Data_Structures;
+package Data_Structures;
 
 import java.util.List;
 import java.util.Stack;

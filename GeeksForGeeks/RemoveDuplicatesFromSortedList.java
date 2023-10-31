@@ -1,4 +1,4 @@
-package com.aditya.DSA.GeeksForGeeks;
+package GeeksForGeeks;
 
 //https://practice.geeksforgeeks.org/problems/remove-duplicate-element-from-sorted-linked-list/1/
 

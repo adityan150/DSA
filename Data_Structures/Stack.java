@@ -1,4 +1,4 @@
-package com.aditya.DSA.Data_Structures;
+package Data_Structures;
 
 import java.util.Iterator;
 public class Stack<Item> implements Iterable<Item>{

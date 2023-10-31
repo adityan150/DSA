@@ -1,6 +1,4 @@
-package com.aditya.DSA.Data_Structures;
-
-
+package Data_Structures;
 
 public class BinaryTree {
     static class Node {
