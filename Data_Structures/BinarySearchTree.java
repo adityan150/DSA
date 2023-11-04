@@ -1,24 +1,7 @@
 package Data_Structures;
-
 import java.util.Arrays;
 
 public class BinarySearchTree {
-
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-            int val = 0;
-            left = right = null;
-        }
-        TreeNode(int val) {
-            this.val = val;
-            left = right = null;
-        }
-    }
-
     public static void main(String[] args) {
         BinarySearchTree bst = new BinarySearchTree();
         TreeNode tree1 = bst.createTree();

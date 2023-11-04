@@ -1,20 +1,10 @@
 package Data_Structures;
 
 public class BinaryTree {
-    static class Node {
-        int key;
-        Node left;
-        Node right;
-
-        Node(int item) {
-            key = item;
-            left = right = null;
-        }
-    }
-    Node root;
+    TreeNode root;
 
     BinaryTree(int key) {
-        root = new Node(key);
+        root = new TreeNode(key);
     }
 
     BinaryTree() {
@@ -24,13 +14,13 @@ public class BinaryTree {
     public static void main(String[] args) {
         BinaryTree tree = new BinaryTree();
 
-        tree.root = new Node(1);
+        tree.root = new TreeNode(1);
 
-        tree.root.left = new Node(2);
-        tree.root.right = new Node(3);
-        tree.root.left.left = new Node(4);
-        tree.root.left.right = new Node(5);
-        tree.root.right.right = new Node(6);
+        tree.root.left = new TreeNode(2);
+        tree.root.right = new TreeNode(3);
+        tree.root.left.left = new TreeNode(4);
+        tree.root.left.right = new TreeNode(5);
+        tree.root.right.right = new TreeNode(6);
 
         /*
                 1

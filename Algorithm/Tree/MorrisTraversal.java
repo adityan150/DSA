@@ -1,11 +1,11 @@
 package Algorithm.Tree;
+import Data_Structures.TreeNode;
 
 //public class TreeNode {
-//    int value;
-//    TreeNode left, right;
-//    TreeNode(int value) {
-//        this.value = value;
-//        left = right = null;
+//    public int val;
+//    public TreeNode left, right;
+//    public TreeNode(int val) {
+//        this.val = val;
 //    }
 //}
 
@@ -22,7 +22,7 @@ public class MorrisTraversal {
             if (current.left == null) {
                 // no left child
                 // print current and move to right
-                System.out.print(current.value + " ");
+                System.out.print(current.val + " ");
                 current = current.right;
             }
             else {
@@ -38,7 +38,7 @@ public class MorrisTraversal {
 
                 if (ln.right == current) {
                     ln.right = null;
-                    System.out.print(current.value + " ");
+                    System.out.print(current.val + " ");
                     current = current.right;
                 }
 
@@ -62,7 +62,7 @@ public class MorrisTraversal {
             if (current.left == null) {
                 // no left child
                 // print current and move to right
-                System.out.print(current.value + " ");
+                System.out.print(current.val + " ");
                 current = current.right;
             }
             else {
@@ -85,7 +85,7 @@ public class MorrisTraversal {
                 // create thread from right-most node in left subtree to current node
                 else {
                     ln.right = current;
-                    System.out.print(current.value + " ");
+                    System.out.print(current.val + " ");
                     current = current.left;
                 }
             }

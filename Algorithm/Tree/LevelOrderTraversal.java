@@ -1,13 +1,14 @@
 package Algorithm.Tree;
+import Data_Structures.TreeNode;
 
 //    public class TreeNode {
-//        int value;
-//        TreeNode left, right;
-//        TreeNode(int value) {
-//            this.value = value;
-//            left = right = null;
+//        public int val;
+//        public TreeNode left, right;
+//        public TreeNode(int val) {
+//            this.val = val;
 //        }
 //    }
+
 
 public class LevelOrderTraversal {
     TreeNode root;
@@ -59,7 +60,7 @@ public class LevelOrderTraversal {
             return;
         }
         else if (level == 1) {
-            System.out.print(root.value + " ");
+            System.out.print(root.val + " ");
         }
         printLevel(root.left, level-1);
         printLevel(root.right, level-1);

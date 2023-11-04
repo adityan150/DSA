@@ -1,10 +1,10 @@
 package Algorithm.Tree;
-
+import Data_Structures.TreeNode;
 import java.util.*;
 
 public class VerticalOrderSorted {
     TreeNode root;
-    private class Tuple {
+    private static class Tuple {
         int hOffset;  // horizontal level of the node in tree
         int vLevel;  // vertical level of the node in tree
         TreeNode node;
@@ -81,7 +81,7 @@ public class VerticalOrderSorted {
             // initialize value for current vertical level
             map.get(current.hOffset).putIfAbsent(current.vLevel, new PriorityQueue<>());
             // add value of current node against it's vertical level
-            map.get(current.hOffset).get(current.vLevel).offer(current.node.value);
+            map.get(current.hOffset).get(current.vLevel).offer(current.node.val);
 
             // update minimum and maximum horizontal offsets
             minHorizontal = Math.min(minHorizontal, current.hOffset);

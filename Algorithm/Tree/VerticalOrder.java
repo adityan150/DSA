@@ -1,15 +1,15 @@
 package Algorithm.Tree;
-
+import Data_Structures.TreeNode;
 import java.util.*;
 
-//    public class TreeNode {
-//        int value;
-//        TreeNode left, right;
-//        TreeNode(int value) {
-//            this.value = value;
-//            left = right = null;
-//        }
+//public class TreeNode {
+//    public int val;
+//    public Data_Structures.TreeNode left, right;
+//
+//    public TreeNode(int val) {
+//        this.val = val;
 //    }
+//}
 
 // unsorted
 public class VerticalOrder {
@@ -91,7 +91,7 @@ public class VerticalOrder {
 
                 // process the dequeued item
                 map.putIfAbsent(current.hLevel, new ArrayList<>());
-                map.get(current.hLevel).add(current.node.value);
+                map.get(current.hLevel).add(current.node.val);
             }
         }
         for (int i = minHLevel; i <= maxHLevel; i++) {

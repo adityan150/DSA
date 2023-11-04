@@ -1,17 +1,8 @@
 package Leetcode;
 
+import Data_Structures.TreeNode;
+
 public class DeleteNodeBST {
-
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int val) {
-            this.val = val;
-            left = right = null;
-        }
-    }
 
     // deletes the node with given element
     public TreeNode deleteNode(TreeNode root, int target) {

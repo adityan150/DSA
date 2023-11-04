@@ -1,13 +1,15 @@
 package Algorithm.Tree;
 
 //    public class TreeNode {
-//        int value;
+//        int val;
 //        TreeNode left, right;
-//        TreeNode(int value) {
-//            this.value = value;
+//        TreeNode(int val) {
+//            this.val = val;
 //            left = right = null;
 //        }
 //    }
+
+import Data_Structures.TreeNode;
 
 import java.util.Stack;
 
@@ -33,7 +35,7 @@ public class Inorder {
             return;
 
         traverseRecursive(root.left);
-        System.out.print(root.value + ", ");
+        System.out.print(root.val + ", ");
         traverseRecursive(root.right);
     }
 
@@ -45,7 +47,7 @@ public class Inorder {
                 root = root.left;
             }
             root = stack.pop();
-            System.out.print(root.value + ", ");
+            System.out.print(root.val + ", ");
             root = root.right;
         }
         System.out.println();

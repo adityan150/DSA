@@ -1,14 +1,16 @@
 package Algorithm.Tree;
 
+import Data_Structures.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.Queue;
 
 //    public class TreeNode {
-//        int value;
+//        int val;
 //        TreeNode left, right;
-//        TreeNode(int value) {
-//            this.value = value;
+//        TreeNode(int val) {
+//            this.val = val;
 //            left = right = null;
 //        }
 //    }
@@ -69,7 +71,7 @@ public class LevelOrderWithQueue {
             }
 
             // process the dequeued item
-            levelOrder.add(current.value);
+            levelOrder.add(current.val);
         }
         return levelOrder;
     }

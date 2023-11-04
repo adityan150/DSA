@@ -1,4 +1,5 @@
 package GeeksForGeeks;
+import Data_Structures.TreeNode;
 
 /*
 Optimized Solution for CheckTreeBalance
@@ -11,16 +12,6 @@ Height is passed as an object to simulate pass by reference
 public class CheckTreeBalanceOptimized {
     TreeNode root;
 
-    private static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        public TreeNode(int val) {
-            this.val = val;
-            left = right = null;
-        }
-    }
 
     // wrapper class used to modify height across recursive calls
     static class Height {
