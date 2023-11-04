@@ -16,7 +16,7 @@ public class VerticalOrder {
     TreeNode root;
 
 
-    private class Pair {
+    private static class Pair {
         int hLevel;
         TreeNode node;
 
